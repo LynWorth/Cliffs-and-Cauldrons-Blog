@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-_c#+ld3pl_)(_3+-h%-f%pe73psu+icwt9=hv%4-q&svzsk5pf'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['8000-lynworth-cliffsandcauld-jzwg396376w.ws.codeinstitute-ide.net','.herokuapp.com']
 
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_summernote',
     'blog',
 ]
 
