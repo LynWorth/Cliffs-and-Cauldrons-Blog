@@ -15,6 +15,13 @@ class Post(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     excerpt = models.TextField(blank=True)
     updated_on = models.DateTimeField(auto_now=True)
+    featured_event = models.ForeignKey(
+        "event.Event",  # 'events' is the app name, 'Event' is the model name
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
+        related_name="featured_in_posts"
+    )
 
     
     class Meta:
