@@ -1,5 +1,5 @@
 body {
-    background-color: #F9FAFC;
+    background-color: #f2e8cf;
 }
 
 .brand {
@@ -18,20 +18,20 @@ body {
 }
 
 .light-bg {
-    background-color: #fff;
+    background-color: #f2e8cf;
 }
 
 .dark-bg {
-    background-color: #445261;
+    background-color: #f2e8cf;
 }
 
 .main-bg {
-    background-color: #F9FAFC;
+    background-color: #f2e8cf;
 }
 
 .card {
     border: none;
-    background-color: transparent;
+    background-color: #a5a67d;
 }
 
 .image-container {
@@ -67,7 +67,7 @@ body {
 }
 
 .masthead-text {
-    background-color: #445261;
+    background-color: #d9a441;
     color: white;
     position: relative;
 }
@@ -84,7 +84,7 @@ body {
     right: 90%;
     height: 100%;
     width: 150%;
-    background: #445261;
+    background: #d9a441;
     -webkit-transform: skew(15deg);
     -moz-transform: skew(15deg);
     transform: skew(15deg);
@@ -98,7 +98,7 @@ body {
 
 .post-link:hover,
 .page-link {
-    color: #E84610;
+    color: #61734d;
 }
 
 .post-title {
@@ -113,7 +113,7 @@ body {
 
 .btn-signup,
 .btn-edit {
-    background-color: #188181;
+    background-color: #d9a441;
     color: #fff;
 }
 
