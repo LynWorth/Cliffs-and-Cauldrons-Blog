@@ -1,5 +1,13 @@
 from django.shortcuts import render
 from .models import Event
+from django.utils.timezone import now
+
+def upcoming_events(request):
+    events = Event.objects.filter(is_public=True, event_date__gte=now())
+    recurring_events = events.exclude(recurrence="none")
+    single_events = events.filter(recurrence="none")
+    return render(request, "events.html", {"events": single_events | recurring_events})
+
 
 
 # Create your views here.

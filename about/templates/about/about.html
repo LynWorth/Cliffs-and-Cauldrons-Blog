@@ -3,38 +3,27 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-<div class="container mt-5">
-    <div class="row">
-        <div class="col-12 col-md-4 text-center">
-            <img src="{% static 'images/nobody.jpg' %}" width="75%">
-        </div>
-        <div class="col-12 col-md-8">
-            <h2>{{ about.title }}</h2>
-            {{ about.content | safe }}
-        </div>
-    </div>
-    <div class="row">
-        <div class="col text-right">
-            <!-- Updated on field goes in here -->
 
-            <p class="text-end"><em>Updated on: {{ about.updated_on }}</em></p>
-        </div>
-    </div>
-    <div class="row justify-content-center">
-        <div class="col-12 col-md-6 my-5">
-            <h2>Contact Me</h2>
-            <p>Please do get in contact for any reason, ideas on places of interest, requests for blog post content etc
-                I'm excited to hear from you. Fill out the form
-                and I'll get back to you.</p>
 
-            <!-- add your form here. Your submit button should 
-                                have the classes of btn, btn-secondary -->
-            <form method="post">
-                {{ collaborate_form | crispy }}
-                {% csrf_token %}
-                <button class="btn btn-secondary" type="submit">Submit</button>
-            </form>
+
+
+        <div class="col-12 col-md- text-center">
+            <img src="{% static 'images/nobody.jpg' %}" width="25%">
         </div>
-    </div>
+    
+
+
+
+        <div class="text-center">
+            <div class="col-12 col-md-8"></div>
+            <h2>About Us</h2>
+            <p>{{ about.content | safe }}</p>
+            <a href="/contact/" class btn>Contact Us</a>
+
+
+        </div>
 </div>
+
+
+
 {% endblock content %}
