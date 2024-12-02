@@ -16,4 +16,6 @@ from django_summernote.admin import SummernoteModelAdmin
 
 @admin.register(Event)
 class EventAdmin(SummernoteModelAdmin):
+    list_display = ("title", "event_date", "location", "recurrence", "is_public")
+    list_filter = ("recurrence", "is_public", "event_date")
     summernote_fields = ('description',)  # Specify fields to use the Summernote editor
