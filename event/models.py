@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils.timezone import now
 from django.core.exceptions import ValidationError
+from cloudinary.models import CloudinaryField
 
 class Event(models.Model):
     RECUR_CHOICES = (
@@ -13,6 +14,7 @@ class Event(models.Model):
     )
 
     title = models.CharField(max_length=200)
+    featured_image = CloudinaryField('image', default='placeholder')
     description = models.TextField()
     location = models.CharField(max_length=255, blank=True, null=True)
     event_date = models.DateTimeField()
