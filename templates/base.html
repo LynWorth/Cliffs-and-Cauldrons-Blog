@@ -1,7 +1,7 @@
 {% load static %}
 {% url 'home' as home_url %}
 {% url 'about' as about_url %}
-{% url 'event' as event_url %}
+{% url 'event' as event_list_url %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
@@ -49,7 +49,12 @@
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == about_url %}active{%endif%}" aria-current="page"
                             href="{% url 'about' %}">About</a>
+                    </li>
+                    
+       
 
+
+                                
 
                         {% if user.is_authenticated %}
                     <li class="nav-item">
@@ -95,10 +100,31 @@
         <p class="text-end m-3">You are not logged in</p>
         {% endif %}
 
-        {% block content %}
-        <!-- Content Goes here -->
-        {% endblock content %}
 
+                           <!-- Event Highlights Section -->
+    <div class="container mt-4">
+        <h2 class="mb-3">Upcoming Events</h2>
+        <div class="row">
+            {% for event in events %}
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{{ event.featured_image.url }}" class="card-img-top" alt="{{ event.title }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ event.title }}</h5>
+                        <p class="card-text">{{ event.description|truncatewords:15 }}</p>
+                        <a href="{% url 'event_detail' event.id %}" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <p>No upcoming events at this time.</p>
+            {% endfor %}
+        </div>
+    </div>      
+
+        {% block content %}
+        <!-- blog Content Goes here -->
+        {% endblock content %}
     </main>
 
     <!-- Footer -->
