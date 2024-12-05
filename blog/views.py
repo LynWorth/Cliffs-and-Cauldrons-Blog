@@ -4,6 +4,8 @@ from django.contrib import messages
 from django.http import HttpResponseRedirect
 from .models import Post, Comment
 from .forms import CommentForm
+from event.models import Event
+
 
 # Create your views here.
 
@@ -55,6 +57,11 @@ def post_detail(request, slug):
             "comment_form": comment_form
         },
     )
+
+def home(request):
+    events = Event.objects.filter(is_public=True).order_by('event_date')[:3]
+    print("Events fetched:", events)  # Debugging output
+    return render(request, "base.html", {"events": events})
 
 
 def comment_edit(request, slug, comment_id):

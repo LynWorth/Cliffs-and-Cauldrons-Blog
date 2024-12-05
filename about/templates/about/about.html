@@ -4,25 +4,43 @@
 
 {% block content %}
 
+<div class="container mt-4">
 
-
-
-        <div class="col-12 col-md- text-center">
-            <img src="{% static 'images/nobody.jpg' %}" width="25%">
+    <div class="row">
+        <div class="col-12">
+            <img src="{% static 'images/nobody.jpg' %}" class="img-fluid w-100"
+                style="max-height: 300px; object-fit: cover;" alt="About Us">
         </div>
-    
-
-
-
-        <div class="text-center">
-            <div class="col-12 col-md-8"></div>
-            <h2>About Us</h2>
-            <p>{{ about.content | safe }}</p>
-            <a href="/contact/" class btn>Contact Us</a>
-
-
+    </div>
+    <div class="row justify-content-center mt-5">
+        <div class="col-12 col-md-8 text-center">
+            <h2>About Me</h2>
+            <p class="lead">{{ about.content | safe }}</p>
+            <p class="text-muted"><em>Updated on: {{ about.updated_on }}</em></p>
         </div>
+    </div>
+    <div class="row justify-content-center mt-5">
+        <div class="col-12 col-md-8">
+            <h2>Get in contact</h2>
+            <p>
+                I'm always eager to hear from you! Whether you have a brilliant idea for a
+                blog post or an event you'd like me to feature, I'd love to connect.
+                Share your thoughts, suggestions, or requests through the form below, and
+                I'll get back to you as soon as possible. Let's create something wonderful
+                together!
+            </p>
+
+            <form method="post">
+                {{ collaborate_form | crispy }}
+                {% csrf_token %}
+                <button class="btn btn-secondary" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
 </div>
+
+
 
 
 
