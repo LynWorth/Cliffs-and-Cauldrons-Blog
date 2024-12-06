@@ -4,11 +4,42 @@ from django.urls import path
 
 urlpatterns = [
     
-  #  path('event', views.event_detail, name='event_detail'),
-    path('event', views.event_detail, name='event'),
-        
-          #  path('event', views.EventsPage.as_view(), name='event_list'),
+            path('event', views.EventsPage.as_view(), name='event'),
+
+            path('event/<int:event_id>', views.event_detail, name='event'),
 ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #urlpatterns = [
 #    # List view for events

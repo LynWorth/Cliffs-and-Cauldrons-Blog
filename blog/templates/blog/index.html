@@ -13,7 +13,7 @@
                 <div class="col">
                     <div class="card h-100">
                         <div class="image-container">
-                            <!-- Clickable Image -->
+                            
                             <a href="{% url 'post_detail' post.slug %}">
                                 {% if "placeholder" in post.featured_image.url %}
                                 <img class="card-img-top img-fluid" src="{% static 'images/default.jpg' %}"
