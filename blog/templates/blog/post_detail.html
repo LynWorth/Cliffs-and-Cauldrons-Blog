@@ -38,6 +38,31 @@
         <hr>
     </div>
 </div>
+
+ <!-- Featured Events Section -->
+ {% if featured_event %}
+ <div class="row mt-5">
+     <div class="col-12">
+         <h3>Because you read this post, you might be interested in this upcoming event:</h3>
+         <div class="card mb-4">
+             <img src="{{ featured_events.featured_image.url }}" 
+                  class="card-img-top img-fluid" 
+                  style="max-height: 200px; object-fit: cover;" 
+                  alt="{{ featured_events.title }}">
+             <div class="card-body">
+                 <h5 class="card-title">{{ featured_events.title }}</h5>
+                 <p class="card-text">{{ featured_events.description|truncatewords:30 }}</p>
+                 <a href="{% url 'event/' related_events.id %}" class="btn btn-primary">Read More</a>
+             </div>
+         </div>
+     </div>
+ </div>
+ {% endif %}
+</div>
+
+
+
+
 <!-- Displaying Comments -->
 <div class="row">
     <div class="col-md-8 card mb-4  mt-3 ">
@@ -116,13 +141,6 @@
 {% block extras %}
 <script src="{% static 'js/comments.js' %}"></script>
 {% endblock %}
-
-
-
-
-
-
-
 
 
 
