@@ -1,14 +1,14 @@
 from . import views
 from django.urls import path
-
+from .views import EventsPage
+from .views import EventDetailView
 
 urlpatterns = [
     
-            path('event/', views.EventsPage.as_view(), name='event'),
+    path('events/', views.EventsPage.as_view(), name='events'),
 
-            path('event/<int:event_id>', views.event_detail, name='event'),
+    path('events/<slug:slug>/', EventDetailView.as_view(), name="event_detail"),
 ]
-
 
 
 
