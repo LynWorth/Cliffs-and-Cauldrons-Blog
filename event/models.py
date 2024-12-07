@@ -14,6 +14,7 @@ class Event(models.Model):
     )
 
     title = models.CharField(max_length=200)
+    slug = models.SlugField(max_length=200, unique=True)
     featured_image = CloudinaryField('image', default='placeholder')
     description = models.TextField()
     location = models.CharField(max_length=255, blank=True, null=True)
