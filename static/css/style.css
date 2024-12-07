@@ -155,3 +155,42 @@ h1, h2, h3, h4, h5, h6 {
 .footer i:hover {
    color: #f4d03f; 
 }
+
+button, .btn {
+   background: linear-gradient(135deg, #6a8e63, #4b6f4a); /* Dark green gradient */
+   color: #ffffff; /* White text for readability */
+   border: none; /* Clean look */
+   border-radius: 8px; /* Soft rounded corners */
+   padding: 10px 20px; /* Comfortable padding */
+   font-family: 'Merriweather', serif; /* Matches the body font */
+   font-weight: bold; /* Makes text stand out */
+   font-size: 1rem; /* Adjust font size for readability */
+   text-transform: uppercase; /* Adds emphasis */
+   letter-spacing: 1px; /* Subtle spacing for elegance */
+   cursor: pointer; /* Pointer to indicate clickability */
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Depth effect */
+   transition: all 0.3s ease; /* Smooth transitions */
+}
+
+/* Hover Effect */
+button:hover, .btn:hover {
+   background: linear-gradient(135deg, #8ebf77, #6a8e63); /* Slightly lighter green */
+   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Elevated shadow */
+   transform: translateY(-2px); /* Lift effect */
+   color: #f5d76e; /* Gold text on hover for magic touch */
+}
+
+/* Active State */
+button:active, .btn:active {
+   background: linear-gradient(135deg, #4b6f4a, #6a8e63); /* Darker green */
+   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2); /* Pressed effect */
+   transform: translateY(2px); /* Downward movement on click */
+}
+
+/* Disabled Buttons */
+button:disabled, .btn:disabled {
+   background: #cccccc; /* Neutral gray */
+   color: #666666; /* Muted text color */
+   cursor: not-allowed; /* Disabled cursor */
+   box-shadow: none; /* No shadow */
+}
