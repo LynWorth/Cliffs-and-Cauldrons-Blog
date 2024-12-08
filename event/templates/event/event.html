@@ -7,15 +7,15 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{{ event.name }}</title>
+        <title>{{ event.title }}</title>
     </head>
     <body>
         <header>
-            <h1>{{ event.name }}</h1>
+            <h1>{{ event.title}}</h1>
         </header>
         <main>
-            <p><strong>Date:</strong> {{ event.event_date }}</p>
-            <p>{{ event.description }}</p>
+            <p><strong> {{ event.event_date }} </strong></p>
+            <p>{{ event.description|striptags }}</p>
             <a href="{% url 'events' %}">Back to Events</a>
         </main>
     </body>
