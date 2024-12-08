@@ -177,13 +177,7 @@ main {
 
 
 
-/*
-body {
-   background: var(--bg-shiny);
-   font-family: 'Poppins', sans-serif;
-   color: #333333; 
-}
-*/
+
 
 main {
    background: var(--bg-shiny);
@@ -218,20 +212,34 @@ h6 {
    border: none;
    border-radius: 8px;
    color: #333333;
+   width: 260px;
+   margin: 5px auto;
+   transition: 0.3s ease;
 }
 
-
+.card-img-top {
+   width: 90%; /* Fit smaller card */
+   height: auto;
+   border-radius: 5px;
+   margin: 0 auto;
+   display: block;
+   max-height: 150px;
+   object-fit: cover;
+}
 .card:hover {
-   background: linear-gradient(135deg, #f9f9f9, #ececec);
-   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+   transform: scale(1.05);
+   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
 
 .card-title {
    color: #6a8e63;
    font-weight: bold;
-   font-size: 1.25rem;
+   font-size: 0.85rem;
    text-decoration: none;
+   text-align: center;
+   margin-bottom: 8px;
+   line-height: 1.2;
 }
 
 .card-title:hover {
@@ -241,6 +249,10 @@ h6 {
 
 .card-text {
    color: #6a8e63;
+   font-size: 0.75rem;
+   line-height: 1.4;
+   text-align: justify;
+   padding: 0 10px;
 }
 
 
@@ -281,20 +293,19 @@ h6 {
    color: #d4af37;
 }
 
-/*
-.footer {
-   background-color: var(--dark-bg);
-   color: var(--text-light);
-   font-size: 1rem;
-   border-top: 2px solid rgba(255, 255, 255, 0.1); 
+.author {
+   font-size: 0.8rem;
+   color: #6a8e63;
+   text-align: center;
+   margin-bottom: 5px;
 }
 
-
-.footer i {
-   color: var(--text-light);
-   margin: 0 10px;
+.row {
+   display: flex;
+   flex-wrap: wrap; /* Ensure cards wrap to new row if needed */
+   justify-content: center; /* Center align cards in the cauldron */
 }
-*/
+
 
 .footer i:hover {
    color: #f4d03f;
