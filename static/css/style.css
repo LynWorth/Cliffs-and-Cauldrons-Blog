@@ -6,11 +6,11 @@
 }
 
 
-.navbar {
+/*.navbar {
    background-color: var(--dark-bg);
    color: var(--text-light);
    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
+}  */
 
 .navbar .navbar-brand {
    color: var(--text-light);
@@ -38,14 +38,71 @@
    text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.8); 
 }
 
+/* Full-page background effect */
+body {
+   margin: 0;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: radial-gradient(circle, rgba(0, 0, 0, 0.8) 65%, var(--dark-bg) 100%);
+   overflow: hidden;
+}
+
+/* Circular cauldron container */
+.cauldron-wrapper {
+   width: 90%; /* Adjust the size as needed */
+   height: 90%;
+   border-radius: 40%; /* Makes the wrapper circular */
+   background: var(--bg-shiny); /* Magic potion green */
+   display: flex;
+   flex-direction: column; /* Stack content vertically */
+   justify-content: space-between; /* Navbar at top, footer at bottom */
+   padding: 20px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+   overflow-y: auto;
+   position: relative;
+}
+
+/* Header (Navbar) styling */
+.navbar {
+   background: transparent;
+   color: var(--text-light);
+   padding: 15px 20px;
+   text-align: center;
+   font-family: 'Cinzel Decorative', serif;
+   text-transform: uppercase;
+   
+}
+
+/* Main content area */
+main {
+   flex-grow: 1; /* Fills remaining space */
+   overflow-y: auto; /* Allow scrolling if content overflows */
+   padding: 20px;
+   text-align: center;
+}
+
+/* Footer styling */
+.footer {
+   background: transparent;
+   color: var(--text-light);
+   text-align: center;
+   padding: 10px;
+   font-size: 0.9rem;
+   z-index: 10;
+}
 
 
+
+
+/*
 body {
    background: var(--bg-shiny);
    font-family: 'Poppins', sans-serif;
    color: #333333; 
 }
-
+*/
 
 main {
    background: var(--bg-shiny);
@@ -138,7 +195,7 @@ h1, h2, h3, h4, h5, h6 {
    color: #d4af37; 
 }
 
-
+/*
 .footer {
    background-color: var(--dark-bg);
    color: var(--text-light);
@@ -151,6 +208,7 @@ h1, h2, h3, h4, h5, h6 {
    color: var(--text-light);
    margin: 0 10px;
 }
+*/
 
 .footer i:hover {
    color: #f4d03f; 
