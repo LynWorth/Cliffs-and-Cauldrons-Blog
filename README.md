@@ -21,20 +21,22 @@ There is a contact me form for anyone who wishes to collaborate with maybe produ
 
 ## Design 
 ## Wireframes
-## ERD ![erd diagram](<readme.images/Cliffs and Cauldrons(1).png>)
 
-## Fonts
+### Cauldron Effect
+The circular "cauldron effect" was designed to create a unique and immersive reading experience, symbolizing the central theme of magic and ritual.
+This shape frames the content in a way that makes it feel special and intentional, drawing the user's focus.
 
-Cinzel Decorative was selected for the headings as it evokes a sense of elegance combined with mysticism. With its inspiration pulling from classical Roman inscription, it perfectly portrays a magical, mystical and witchy mood on the Cliffs and Cauldrons Blog. Choosing to use the font in bold and uppercase along with its decorative flourishes provides a dramatic and striking effect for the blog.
 
-In contrast, Merriweather is an elegant and highly readable serif font and was chosen to ensure the larger bodies of text are accessible and easy to read. Merriweather, placed alongside the dramatic Cinzel Decorative, provides a calmer, sophisticated text to calm the user, offering a modern yet timeless feel alongside the drama of Cinzel Decorative.
+
 
 
 ## Colour Scheme
 
+![screenshot of coolers colour pallet](<readme.images/cliffs&cauldrons.png>)
+
 ### Primary Colours
 
-The colour pallete was created in <a href=https://coolors.co/>Coolors.co</a> with a focus on earthy greens for grounding, earthiness and a calming feel. The pale green (#c5e8c8) is inviting, easy on the eyes and complimentary to the magical theme the blog sits in. Using dark green (#6a8e63) for the header and footer elements provides a strong contrast to the pale green background, reinforcing the nature theme and creating a cohesive colour scheme.
+The colour pallete was created in <a href=https://coolors.co/>Coolors.co</a> with a focus on earthy greens for grounding, earthiness and a calming feel. The pale green (#c5e8c8) is inviting, easy on the eyes and complimentary to the magical theme the blog sits in. Using dark green (#6a8e63) for button backgrounds provides a strong contrast to the pale green background, reinforcing the nature theme and creating a cohesive colour scheme.
 Gold (#d9a441) was selected to be used sparingly as an accent colour for hover effects, titles and  decorative elements. Providing a subtle glow that conveys a sense of alchemy, magic and sophistication. Gold aligns with the witchy mystical realm of spirituality and is perfectly placed within the blog to reinforce the witchy theme.
 
 ### Secondary Colours 
@@ -46,15 +48,32 @@ All the colours have been inspired by the natural elements that surround us, gre
 
 
 
-![screenshot of coolers colour pallet](<readme.images/cliffs&cauldrons.png>)
+
+## Fonts
+
+Cinzel Decorative was selected for the headings as it evokes a sense of elegance combined with mysticism. With its inspiration pulling from classical Roman inscription, it perfectly portrays a magical, mystical and witchy mood on the Cliffs and Cauldrons Blog. Choosing to use the font in bold and uppercase along with its decorative flourishes provides a dramatic and striking effect for the blog.
+
+In contrast, Merriweather is an elegant and highly readable serif font and was chosen to ensure the larger bodies of text are accessible and easy to read. Merriweather, placed alongside the dramatic Cinzel Decorative, provides a calmer, sophisticated text to calm the user, offering a modern yet timeless feel alongside the drama of Cinzel Decorative.
 
 
 ## Conclusion
 
 The choice of fonts and colours represents the theme of Cliffs and Cauldrons as a magical mystical, but earthly based grounded blog that maintains accessabilty, readability and a modern aesthetic. The font choices create a harmony of both drama and elegance whilst the nature inspired palette complements the chosen texts.
 
+The sticky navbar ensures easy navigation across the site while blending into the overall design.
+The footer was kept minimal and consistent, offering clear links to social media for continued engagement.
+
+The site is designed to work seamlessly across devices, from desktops to smartphones. The cauldron layout adapts dynamically to fit smaller screens while maintaining its circular aesthetic.
+
+The design avoids clutter, focusing on clean and simple layouts to ensure users can focus on the blog's content without distractions.
 
 
+
+
+
+## ERD
+
+ ![](readme.images/ERD%20diagram%20(Cliffs&Cauldrons).png)
 
 ## Accessibility Considerations
 
