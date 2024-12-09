@@ -14,7 +14,7 @@
                             <div class="image-container">
                                 <!-- Display featured image if available, else show a default image -->
                                 {% if event.featured_image %}
-                                <img class="card-img-top" src="{{ event.featured_image.url }}" alt="{{ event.name }}">
+                                <img class="card-img-top" src="{{ event.featured_image.url }}" alt="{{ event.title }}">
                                 {% else %}
                                 <img class="card-img-top" src="{% static 'images/default.jpg' %}" alt="Default image">
                                 {% endif %}
