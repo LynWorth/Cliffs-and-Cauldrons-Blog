@@ -32,11 +32,9 @@
             {% if post.featured_event %}
                 <h3>Because you read this post, you might be interested in this upcoming event:</h3>
                 <div class="featured-event">
-                    <h4>{{ post.featured_event.title }}</h4>
-                    
-                    <p><strong>Date:</strong> {{ post.featured_event.date }}</p>
+                    <h4 class="fw-bold">{{ post.featured_event.title }}</h4>
                     <p><strong>Location:</strong> {{ post.featured_event.location }}</p>
-                    <a href="{% url 'event_detail' slug=post.featured_event.slug %}" class="btn btn-primary">
+                    <a href="{% url 'event_detail' slug=post.featured_event.slug %}" class="btn btn-primary" style="margin-bottom: 20px;">
                         Learn More
                     </a>
                 </div>
@@ -53,9 +51,9 @@
 
 <!-- Displaying Comments -->
 <div class="row">
-    <div class="col-12 ">
+    <div class="col-12">
         <h3>Comments:</h3>
-        <div class="card-body">
+        <div class="text-center">
 
             <!-- for loop to iterate through each comment in comments -->
             {% for comment in comments %}
