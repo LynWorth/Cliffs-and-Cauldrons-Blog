@@ -107,9 +107,9 @@
         <main class="flex-shrink-0 py-4" style="background: var(--bg-shiny);">
         <div class="container">
             {% if user.is_authenticated %}
-            <p class="text-end text-muted">You are logged in as {{ user }}</p>
+            <p class="text-center text-muted">You are logged in as {{ user }}</p>
             {% else %}
-            <p class="text-end text-muted">You are not logged in</p>
+            <p class="text-center text-muted">You are not logged in</p>
             {% endif %}
 
             {% block content %}

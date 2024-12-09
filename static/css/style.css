@@ -80,6 +80,17 @@ body {
       padding: 10px;
       /* Reduce padding for compact layout */
    }
+}
+
+/*   
+@media (max-width: 576px) {
+   .cauldron-wrapper {
+      width: 100%; /* Full-width for very small screens */
+   /*   border-radius: 50% / 65%;
+      padding: 10px; /* Reduce padding for space efficiency */
+/*   }
+}      
+*/
 
    main {
       padding: 10px;
