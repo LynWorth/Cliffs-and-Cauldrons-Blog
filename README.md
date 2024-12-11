@@ -182,7 +182,9 @@ I made sure that both text and background colours meet WCAG standards for contra
 
 
 Agile Methodology was used throughout the project 
-![](readme.images/                        )
+![](readme.images/Project%20board%20in%20use.png) 
+
+![](readme.images/Project%20Board%20completed.png)                       
 
 
 
@@ -201,7 +203,7 @@ Agile Methodology was used throughout the project
  The home page offers the user a choice of blog posts that can then be clicked on to read the blog of their choice in more detail.
  
 
- ![](readme.images/)
+ ![](readme.images/Home.png)
 
  - Events Page
 
@@ -214,23 +216,34 @@ Agile Methodology was used throughout the project
 
  The about page gives information about the blog post creator and provides a form at the bottom of the page inviting site users to contact the creator to collaborate, or to submit details of any of their events they'd like the blog page to advertise.
 
- ![](readme.images)
+ ![](readme.images/About%20.png)
 
  - Blog detail Page
 
  Shows the blog in full and includes an area after the blog for a featured event of a similar nature to be broought to the site readers attention as it may be of interest to them.
 
- ![]()
+ ![](readme.images/Blog%20page%20detail.png)
 
   - Event Detail Page
 
   Shows each event in detail 
 
-  ![]()
+  
 
- ![](readme.images)
+ ![](readme.images/Event%20detail%20.png)
 
  - Event detail Page
+
+
+ - Contact Form
+
+ ![](readme.images/Contact%20Fom.png)
+
+
+ - Leave a comment 
+
+ ![](readme.images/Leave%20Comment.png)
+
 
 
  - Navigation is provided by a bootstrap navbar on larger screens and toggler on smaller screens
@@ -252,7 +265,7 @@ Agile Methodology was used throughout the project
 
  The site has a facility for designated admin staff to sign and order the site via Django's admin interface
 
- ![]()
+ ![](readme.images/Django%20Admin.png)
 
  -  Entity Relationship Diagram
 
@@ -262,13 +275,8 @@ Agile Methodology was used throughout the project
 
 Manual Testing
 
-### Chrome
 
-### Firefox
 
-### Safari
-
-### Lighthouse
 
 ## Responsive Testing 
 
