@@ -1,3 +1,4 @@
+/* Root Variables */
 :root {
    --dark-bg: #6a8e63;
    --pale-green: #c5e8c8;
@@ -5,24 +6,43 @@
    --text-light: #ffffff;
 }
 
+/* General Body and Typography */
+body {
+   font-family: 'Merriweather', serif;
+   font-size: 1rem;
+   line-height: 1.6;
+   color: #333333;
+   margin: 0;
+   
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: radial-gradient(circle, rgba(0, 0, 0, 0.8) 65%, var(--dark-bg) 100%);
+   overflow: hidden;
+}
 
-/*.navbar {
-   background-color: var(--dark-bg);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-family: 'Cinzel Decorative', serif;
+   color: #8ebf77;
+   text-transform: uppercase;
+}
+
+/* Navbar Styling */
+.navbar {
+   background: transparent;
    color: var(--text-light);
-   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}  */
+   padding: 15px 20px;
+   text-align: center;
+   font-family: 'Cinzel Decorative', serif;
+   text-transform: uppercase;
+}
 
 .navbar .navbar-brand {
-   color: var(--text-light);
-   font-size: 1.5rem;
-}
-
-.navbar .navbar-brand:hover {
-   color: #f4d03f;
-}
-
-
-.navbar-brand {
    font-family: 'Cinzel Decorative', serif;
    font-weight: 700;
    font-size: 2rem;
@@ -33,126 +53,86 @@
    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-.navbar-brand:hover {
+.navbar .navbar-brand:hover {
    color: #f5d76e;
    text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.8);
 }
 
-/* Full-page background effect */
-body {
-   margin: 0;
-   height: 100vh;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   background: radial-gradient(circle, rgba(0, 0, 0, 0.8) 65%, var(--dark-bg) 100%);
-   overflow: hidden;
+@media (max-width: 768px) {
+   .navbar {
+      padding: 10px;
+      font-size: 0.9rem;
+   }
+
+   .navbar .navbar-brand {
+      font-size: 1.4rem;
+   }
+
+   .navbar a {
+      margin: 0 5px;
+   }
 }
 
-/* Circular cauldron container */
+@media (max-width: 480px) {
+   .navbar .navbar-brand {
+      font-size: 1.2rem;
+   }
+
+   .navbar a {
+      font-size: 0.8rem;
+   }
+}
+
+/* Main Content Area */
+main {
+   flex-grow: 1;
+   background: var(--bg-shiny);
+   box-shadow: inset 0 1px 3px rgba(255, 255, 255, 0.5), inset 0 -1px 5px rgba(0, 0, 0, 0.2);
+   border-radius: 8px;
+   padding: 20px;
+   text-align: center;
+   overflow-y: auto;
+}
+
+.blog-post-body {
+   align-content: center;
+   font-size: 1rem;
+   line-height: 1.8;
+   text-align: justify;
+   margin-top: 20px;
+}
+
+.post-body {
+   font-size: 1rem;
+   line-height: 1.8;
+   text-align: justify;
+   margin: 20px;
+}
+
+
+/* cauldron container */
 .cauldron-wrapper {
    width: 88%;
-   /* Adjust the size as needed */
    height: 97%;
    border-radius: 48%;
-   /* Makes the wrapper circular */
    background: var(--bg-shiny);
-   /* Magic potion green */
    display: flex;
    flex-direction: column;
-   /* Stack content vertically */
    justify-content: space-between;
-   /* Navbar at top, footer at bottom */
    padding: 20px;
    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
    overflow-y: auto;
    position: relative;
 }
 
-@media (max-width: 768px) {
-   .cauldron-wrapper {
-      width: 95%;
-      /* Slightly smaller width */
-      height: 95%;
-      /* Slightly smaller height */
-      border-radius: 50%;
-      /* More circular for smaller screens */
-      padding: 10px;
-      /* Reduce padding for compact layout */
-   }
+html,
+body {
+   overflow-y: scroll;
 }
-
-/*   
-@media (max-width: 576px) {
-   .cauldron-wrapper {
-      width: 100%; /* Full-width for very small screens */
-   /*   border-radius: 50% / 65%;
-      padding: 10px; /* Reduce padding for space efficiency */
-/*   }
-}      
-*/
-
-   main {
-      padding: 10px;
-      /* Adjust content padding */
-   }
-
-   .footer {
-      font-size: 0.8rem;
-      /* Reduce footer text size */
-      padding: 5px;
-      /* Reduce footer padding */
-   }
-}
-
-@media (max-width: 480px) {
-   .cauldron-wrapper {
-      width: 98%;
-      /* Near full width for very small screens */
-      height: 98%;
-      border-radius: 50%;
-      /* Keep it circular */
-   }
-
-   .navbar .navbar-brand {
-      font-size: 1.2rem;
-      /* Smaller branding */
-   }
-
-   .navbar a {
-      font-size: 0.8rem;
-      /* Smaller links */
-   }
-
-   .footer {
-      font-size: 0.7rem;
-   }
-}
+   
 
 
-
-/* Header (Navbar) styling */
-.navbar {
-   background: transparent;
-   color: var(--text-light);
-   padding: 15px 20px;
-   text-align: center;
-   font-family: 'Cinzel Decorative', serif;
-   text-transform: uppercase;
-
-}
-
-/* Main content area */
-main {
-   flex-grow: 1;
-   /* Fills remaining space */
-   overflow-y: auto;
-   /* Allow scrolling if content overflows */
-   padding: 20px;
-   text-align: center;
-}
-
-/* Footer styling */
+/* Footer Styling */
 .footer {
    background: transparent;
    color: var(--text-light);
@@ -162,61 +142,65 @@ main {
    z-index: 10;
 }
 
+.footer i:hover {
+   color: #f4d03f;
+}
+
 @media (max-width: 768px) {
-   .navbar {
-      padding: 10px;
-      /* Reduce padding */
-      font-size: 0.9rem;
-      /* Adjust font size */
-   }
-
-   .navbar .navbar-brand {
-      font-size: 1.4rem;
-      /* Slightly smaller branding */
-   }
-
-   .navbar a {
-      margin: 0 5px;
-      /* Reduce spacing between links */
-   }
-
-   .navbar .navbar-collapse {
-      text-align: center;
-      /* Center collapsible content */
+   .footer {
+      font-size: 0.8rem;
+      padding: 5px;
    }
 }
 
+@media (max-width: 480px) {
+   .footer {
+      font-size: 0.7rem;
+   }
+}
 
-
-
-
-main {
-   background: var(--bg-shiny);
-   box-shadow: inset 0 1px 3px rgba(255, 255, 255, 0.5), inset 0 -1px 5px rgba(0, 0, 0, 0.2);
+/* Buttons */
+button,
+.btn {
+   background: linear-gradient(135deg, #6a8e63, #4b6f4a);
+   color: #ffffff;
+   border: none;
    border-radius: 8px;
-   padding: 20px;
-}
-
-
-body {
+   padding: 10px 20px;
    font-family: 'Merriweather', serif;
+   font-weight: bold;
    font-size: 1rem;
-   line-height: 1.6;
-   color: #333333;
-}
-
-/* Heading styles */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-   font-family: 'Cinzel Decorative', serif;
-   color: #6a8e63;
    text-transform: uppercase;
+   letter-spacing: 1px;
+   cursor: pointer;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   transition: all 0.3s ease;
 }
 
+button:hover,
+.btn:hover {
+   background: linear-gradient(135deg, #8ebf77, #6a8e63);
+   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+   transform: translateY(-2px);
+   color: #f5d76e;
+}
+
+button:active,
+.btn:active {
+   background: linear-gradient(135deg, #4b6f4a, #6a8e63);
+   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+   transform: translateY(2px);
+}
+
+button:disabled,
+.btn:disabled {
+   background: #cccccc;
+   color: #666666;
+   cursor: not-allowed;
+   box-shadow: none;
+}
+
+/* Cards */
 .card {
    background: linear-gradient(135deg, #ffffff, #f4f4f4);
    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
@@ -228,8 +212,13 @@ h6 {
    transition: 0.3s ease;
 }
 
+.card:hover {
+   transform: scale(1.05);
+   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
 .card-img-top {
-   width: 90%; /* Fit smaller card */
+   width: 90%;
    height: auto;
    border-radius: 5px;
    margin: 0 auto;
@@ -237,11 +226,6 @@ h6 {
    max-height: 150px;
    object-fit: cover;
 }
-.card:hover {
-   transform: scale(1.05);
-   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-}
-
 
 .card-title {
    color: #6a8e63;
@@ -257,7 +241,6 @@ h6 {
    color: #d4af37;
 }
 
-
 .card-text {
    color: #6a8e63;
    font-size: 0.75rem;
@@ -266,196 +249,19 @@ h6 {
    padding: 0 10px;
 }
 
-
-
 .text-muted {
    color: #6a8e63;
 }
 
-
-.pagination .page-link {
-   color: #6a8e63;
-   font-weight: bold;
-}
-
-.pagination .page-link:hover {
-   color: #d4af37;
-}
-
-.card a {
-   text-decoration: none;
-   color: inherit;
-}
-
-
-.card-title {
-   text-decoration: none;
-   color: #6a8e63;
-   font-weight: bold;
-}
-
-.card-title:hover {
-   color: #d4af37;
-}
-
-
-.card a.post-link:hover {
-   text-decoration: underline;
-   color: #d4af37;
-}
-
-.author {
-   font-size: 0.8rem;
-   color: #6a8e63;
-   text-align: center;
-   margin-bottom: 5px;
-}
-
-.row {
-   display: flex;
-   flex-wrap: wrap; /* Ensure cards wrap to new row if needed */
-   justify-content: center; /* Center align cards in the cauldron */
-}
-
-
-.footer i:hover {
-   color: #f4d03f;
-}
-
-button,
-.btn {
-   background: linear-gradient(135deg, #6a8e63, #4b6f4a);
-   /* Dark green gradient */
-   color: #ffffff;
-   /* White text for readability */
-   border: none;
-   /* Clean look */
-   border-radius: 8px;
-   /* Soft rounded corners */
-   padding: 10px 20px;
-   /* Comfortable padding */
-   font-family: 'Merriweather', serif;
-   /* Matches the body font */
-   font-weight: bold;
-   /* Makes text stand out */
-   font-size: 1rem;
-   /* Adjust font size for readability */
-   text-transform: uppercase;
-   /* Adds emphasis */
-   letter-spacing: 1px;
-   /* Subtle spacing for elegance */
-   cursor: pointer;
-   /* Pointer to indicate clickability */
-   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-   /* Depth effect */
-   transition: all 0.3s ease;
-   /* Smooth transitions */
-}
-
-/* Hover Effect */
-button:hover,
-.btn:hover {
-   background: linear-gradient(135deg, #8ebf77, #6a8e63);
-   /* Slightly lighter green */
-   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-   /* Elevated shadow */
-   transform: translateY(-2px);
-   /* Lift effect */
-   color: #f5d76e;
-   /* Gold text on hover for magic touch */
-}
-
-/* Active State */
-button:active,
-.btn:active {
-   background: linear-gradient(135deg, #4b6f4a, #6a8e63);
-   /* Darker green */
-   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
-   /* Pressed effect */
-   transform: translateY(2px);
-   /* Downward movement on click */
-}
-
-/* Disabled Buttons */
-button:disabled,
-.btn:disabled {
-   background: #cccccc;
-   /* Neutral gray */
-   color: #666666;
-   /* Muted text color */
-   cursor: not-allowed;
-   /* Disabled cursor */
-   box-shadow: none;
-   /* No shadow */
-}
-
-
-.blog-title {
-   font-size: 2rem;
-   margin-bottom: 20px;
-}
-.text-muted {
-   font-size: 0.9rem;
-   color: #6c757d;
-}
-
-.post-body {
-   font-size: 1rem;
-   line-height: 1.8;
-   text-align: justify;
-   margin: 20px;
-}
-
+/* Comments Section */
 .comments-section {
    margin-top: 20px;
-}
-
-.comment-card {
-   background-color: #f9f9f9;
-   padding: 15px;
-   margin-bottom: 10px;
-   border-radius: 5px;
-   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.comment-card strong {
-   color: #343a40;
-}
-
-/*.blog-detail-card {
-   max-width: 100%;
-   margin: 0 auto;
-   border-radius: 8px;
-   background-color: ##fff;
-   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-   padding: 20px;
-} */
-/*
-.blog-post-image {
-   
-   max-height: 400px;
-   object-fit: cover;
-   border-top-left-radius: 8px;
-   border-top-right-radius: 8px;
-} */
-
-.blog-post-body {
-   align-content: center;
-   font-size: 1rem;
-   line-height: 1.8;
-   text-align: justify;
-   margin-top: 20px;
-} 
-
-/* General comments section styling */
-.comments-section {
    background-color: #fff;
    border-radius: 12px;
    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
    margin-bottom: 20px;
 }
 
-/* Individual comment styling */
 .comment-card {
    border: 1px solid #ddd;
    border-radius: 8px;
@@ -464,20 +270,8 @@ button:disabled,
    background-color: #f9f9f9;
 }
 
-.comment-card.faded {
-   background-color: #f8f9fa;
-   color: #6c757d;
-}
-
-/* Comment form styling */
 .comment-form-section {
    background-color: #fff;
    border-radius: 12px;
    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
-/* Buttons for actions */
-.comment-actions .btn {
-   margin-right: 5px;
-}
-
