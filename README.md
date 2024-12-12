@@ -253,9 +253,10 @@ Agile Methodology was used throughout the project using the MoSCoW approach.
 
  - There are also register, sign in and sign out pages
 
- ![](readme.images)
- ![](readme.images)
- ![](readme.images/)
+ 
+ ![](readme.images/IMG_0190.png)
+ ![](readme.images/IMG_0191.png)
+ ![](readme.images/IMG_0192.png)
 
 
 
@@ -374,8 +375,8 @@ In order to create a new Heroku App:
 
 - This blog is based on the "I think, Therefore I blog" project featured in the Code Institute LMS.
 
-### Content
-### Media
+
+
 https://propercornwall.co.uk/events/montol-festival-2024/ - a local event
 
 https://chatgpt.com/ - Created blog and event imagery and text
