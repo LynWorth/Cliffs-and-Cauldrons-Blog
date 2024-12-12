@@ -220,9 +220,11 @@ Agile Methodology was used throughout the project
 
  - Blog detail Page
 
- Shows the blog in full and includes an area after the blog for a featured event of a similar nature to be broought to the site readers attention as it may be of interest to them.
+ Shows the blog in full and includes an area after the blog for a featured event of a similar nature to be brought to the site readers attention as it may be of interest to them.
 
  ![](readme.images/Blog%20page%20detail.png)
+ ![](readme.images/Blog%20page%20Event%20Feature.png)
+
 
   - Event Detail Page
 
@@ -233,7 +235,7 @@ Agile Methodology was used throughout the project
  ![](readme.images/Event%20detail%20.png)
 
  - Event detail Page
-
+![](readme.images/Event%20detail%20.png)
 
  - Contact Form
 
@@ -248,8 +250,8 @@ Agile Methodology was used throughout the project
 
  - Navigation is provided by a bootstrap navbar on larger screens and toggler on smaller screens
 
- ![]()
- ![]()
+ ![](readme.images/Navbar.png)
+ ![](readme.images/)
 
  - There are also register, sign in and sign out pages
 
