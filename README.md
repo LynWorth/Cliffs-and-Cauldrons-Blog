@@ -1,15 +1,15 @@
 # Cliffs and Cauldrons
 
-This project is a blog platform inspired by Cornish witchcraft and pagan spirituality, offering a rich collection of blog posts that explore all things spiritual, witchy, and pagan themed. Visitors are welcome to freely browse through the site, choose which blog posts they'd like to read and then they are able to delve into various aspects of these traditions.
+This project is a blog platform inspired by Cornish Witchcraft and Pagan spirituality, offering a rich collection of blog posts that explore all things of a spiritual, witchy, and pagan theme. Visitors are welcome to freely browse through the site, choose which blog posts they'd like to read and then they are able to delve into various aspects of these traditions.
 
 In addition to the blog, the platform also features an "Events" page, where users can explore details about upcoming spiritual gatherings, workshops, and other related upcoming events in the area.  
 
-
 Registered users can enhance their experience further by contributing to the community through the comments section on each blog post, fostering discussion and connection.
-The blog also features a 'contact me' form for anyone who wishes to collaborate with the page, for instance they may want to offer some ideas for blog content or they might have an event they'd like the site to advertise for them. 
+
+The blog also features a 'contact me' form for anyone who wishes to collaborate with the page, for instance, they may want to offer some ideas for blog content or they might have an event they'd like the site to advertise for them. 
 
 ##  UX Design 
-## Wireframes
+### Wireframes
 
 #### Wireframe Design for desktop
 
@@ -47,19 +47,15 @@ Cinzel Decorative was selected for the headings as it evokes a sense of elegance
 
 In contrast, Merriweather is an elegant and highly readable serif font and was chosen to ensure the larger bodies of text are accessible and easy to read. Merriweather, placed alongside the dramatic Cinzel Decorative, provides a calmer, sophisticated text to calm the user, offering a modern yet timeless feel alongside the drama of Cinzel Decorative.
 
-
-## Conclusion
-
-The choice of fonts and colours represents the theme of Cliffs and Cauldrons as a magical mystical, but earthly based grounded blog that maintains accessabilty, readability and a modern aesthetic. The font choices create a harmony of both drama and elegance whilst the nature inspired palette complements the chosen texts.
+The choice of fonts and colours represents the theme of Cliffs and Cauldrons as a magical and mystical, but earthly based grounded blog that maintains accessabilty, readability and a modern aesthetic. The font choices create a harmony of both drama and elegance whilst the nature inspired palette complements the chosen texts.
 
 The sticky navbar ensures easy navigation across the site while blending into the overall design.
 The footer was kept minimal and consistent, offering clear links to social media for continued engagement.
 
-### Cauldron Effect
 The circular "cauldron effect" was designed to create a unique and immersive reading experience, symbolizing the central theme of magic and ritual.
 This shape frames the content in a way that makes it feel special and intentional, drawing the user's focus.
 
-The site is designed to work seamlessly across devices, from desktops to smartphones. The cauldron layout adapts dynamically to fit smaller screens while maintaining its circular aesthetic.
+The site is designed to work seamlessly across devices, from desktops to smartphones. The cauldron layout adapts dynamically to fit smaller screens while maintaining its cauldron aesthetic.
 
 The design avoids clutter, focusing on clean and simple layouts to ensure users can focus on the blog's content without distractions.
 
@@ -181,7 +177,7 @@ I made sure that both text and background colours meet WCAG standards for contra
 
 
 
-Agile Methodology was used throughout the project 
+Agile Methodology was used throughout the project using the MoSCoW approach.
 ![](readme.images/Project%20board%20in%20use.png) 
 
 ![](readme.images/Project%20Board%20completed.png)                       
@@ -220,10 +216,12 @@ Agile Methodology was used throughout the project
 
  - Blog detail Page
 
- Shows the blog in full and includes an area after the blog for a featured event of a similar nature to be brought to the site readers attention as it may be of interest to them.
+ Shows the blog in full and includes an area after the blog for a featured event of a similar nature to be brought to the site readers attention as it may be of interest to them. Not all blogs have a featured event and the user is informed if there is no relevant event currently.
 
  ![](readme.images/Blog%20page%20detail.png)
  ![](readme.images/Blog%20page%20Event%20Feature.png)
+ ![](readme.images/notification%20.png)
+
 
 
   - Event Detail Page
@@ -278,36 +276,53 @@ Agile Methodology was used throughout the project
 Manual Testing
 
 
+## User Stories
+
+![](readme.images/user%20story%20test%20table.png)
+
+The site has been tested by different users on laptops, mobile phones and an ipad, other than someone pointing out a spelling mistake, no one had any issues navigating their way around the site, logging in, creating a comment, editing the comment and then deleting the comment. They also managed to submit a form, and to log out of the site safely again. 
+
+Items highlighted for improvement were:
+
+Confirmation messages fall outside of the cauldron wrapper and can't currently be seen fully, this needs to be addressed in the next iteration.
+
+![](readme.images/IMG_0186.png)
+
+However, U=users do see confirmation messages upon posting or editing a comment
+
+![](readme.images/notification%20.png)
 
 
-## Responsive Testing 
 
-The site was tested for responsivity throughout the build with Chrome Dev tools, it was also tested on different devices, ipad Pro, iPhone, desktop and laptops
+The site was tested for responsivity throughout the build with Chrome Dev tools, it was also tested on different devices, ipad Pro, iPhone, desktop and laptops. It works well on ipad pro and on smaller screens but the cards merge together as you test in chrome dev tools. This needs to be fixed on the next iteration.
+
+During production ater re-arranging the CSS files I encountered a few issues with the site not showing as it had done, I've learnt the hard way to keep the CSS tidy and in labeled sections as I go. I'm not sure if intermingled with this I also had problems with the collectstatic files too. This was my major bug that needed fixing throughout the build. 
+
+
 
 ## Validator Testing
 
  - HTML
+ 
 
  W3C validator
+ There were no major errors
 
- ![](readme.images/)
+ ![](readme.images/HTML%20Checker.jpeg)
 
   - CSS
+  No errors
 
   W3C validator
+   No errors
 
-  ![](readme.i)
+  ![](readme.images/CSS%20Check.jpeg)
 
-   - Python
+  
 
-   PEP8 
+ -
 
-   The only code that didn't pass was the code automatically generated by Django
-
- - Javascript
-
-    JSHint
-
+   
 ## Deployment
 
 The site was deployed to Heroku from the main branch of the github repository early in the development stages for continuous deploying and checking.
@@ -317,7 +332,33 @@ Heroku is set up with 3 environment variable, replacing the environment variable
 In order to create a new Heroku App:
 
 
- ![](readme.images/)
+    Click on New in the Heroku dashboard, and Create new app from the menu dropdown.
+
+    Give your new app a unique name, and choose a region, preferably one that is geographically closest to you.
+
+    Click "Create app"
+
+    In your app settings, click on "Reveal Config Vars" and add the environment variables for your app. These are:
+
+    DATABASE_URL - your database connection string
+    SECRET_Key - the secret key for your app
+    CLOUDINARY_URL - the cloudinary url for your image store
+
+    The PostgreSQL database is served from ElephantSQL
+
+    Once the app setup is complete, click on the Deploy tab and:
+
+    connect to the required GitHub account
+    select the repository to deploy from
+    click the Deploy Branch button to start the deployment.
+    Once deployment finishes the app can be launched.
+
+
+
+
+
+ ![](readme.images/Heroku%20deployment%20.png)
+ ![](readme.images/Heroku%20deployment1.png)
 
 
 

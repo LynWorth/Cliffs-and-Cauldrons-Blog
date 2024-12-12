@@ -203,9 +203,6 @@ main {
    margin-top: 5px;
 }
 
-.footer i:hover {
-   color: #f4d03f;
-}
 
 @media (max-width: 768px) {
    .footer {

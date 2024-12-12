@@ -8,7 +8,7 @@
         <div class="col-12 mt-3 left">
             <div class="row">
                 {% for post in post_list %}
-                <!-- col-md-6 - (doesn't work) col-lg-4 -->
+                
                 <div class="col-lg-4 ">
                     <div class="card mb-4">
                         <div class="card-body">
@@ -19,18 +19,12 @@
                                 {% else %}
                                 <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="{{ post.title }}">
                                 {% endif %}
-                              <!---  <div class="image-flash">
-                                    <p class="author">Author: {{ post.author }}</p>
-                                </div> -->
+
                             </div>
                             <a href="{% url 'post_detail' post.slug %}" class="post-link">
                                 <h2 class="card-title">{{ post.title }}</h2>
                                 <p class="card-text">{{ post.excerpt }}</p>
                             </a>
-
-                          <!---  <hr 
-                            <p class="card-text text-muted h6">{{ post.created_on}}
-                            </p> -->
                         </div>
                     </div>
                 </div>

@@ -28,7 +28,7 @@ h4,
 h5,
 h6 {
    font-family: 'Cinzel Decorative', serif;
-   color: #b61d76;
+   color: #6a8e63;
    text-transform: uppercase;
 }
 
@@ -72,6 +72,7 @@ h6 {
       margin: 0 5px;
    }
 }
+
 
 @media (max-width: 480px) {
    .navbar .navbar-brand {
