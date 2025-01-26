@@ -289,13 +289,15 @@ Confirmation messages fall outside of the cauldron wrapper and can't currently b
 
 ![](readme.images/IMG_0186.png)
 
-However, U=users do see confirmation messages upon posting or editing a comment
+However, users do see confirmation messages upon posting or editing a comment
 
 ![](readme.images/notification%20.png)
 
 
 
 The site was tested for responsivity throughout the build with Chrome Dev tools, it was also tested on different devices, ipad Pro, iPhone, desktop and laptops. It works well on ipad pro and on smaller screens but the cards merge together as you test in chrome dev tools. This needs to be fixed on the next iteration.
+
+
 
 During production ater re-arranging the CSS files I encountered a few issues with the site not showing as it had done, I've learnt the hard way to keep the CSS tidy and in labeled sections as I go. I'm not sure if intermingled with this I also had problems with the collectstatic files too. This was my major bug that needed fixing throughout the build. 
 
