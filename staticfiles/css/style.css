@@ -13,13 +13,13 @@ body {
    line-height: 1.6;
    color: #333333;
    margin: 0;
-   height: 100vh;
    display: flex;
-   justify-content: center;
-   align-items: center;
+   flex-direction: column;
    background: radial-gradient(circle, rgba(0, 0, 0, 0.8) 65%, var(--dark-bg) 100%);
-   overflow: hidden;
+   min-height: 100vh;
 }
+
+
 
 h1,
 h2,
@@ -36,21 +36,51 @@ h6 {
 .navbar {
    background: transparent;
    color: var(--text-light);
-   padding: 15px 20px;
+   padding: 0px 20px; 
    text-align: center;
    font-family: 'Cinzel Decorative', serif;
-   text-transform: uppercase;
+   text-transform: uppercase;    
 }
+
+
+.navbar .container-fluid {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+
 
 .navbar .navbar-brand {
    font-family: 'Cinzel Decorative', serif;
-   font-weight: 700;
+   font-weight: 800;
    font-size: 2rem;
    color: #d9a441;
    text-transform: uppercase;
+   
    letter-spacing: 2px;
    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
    transition: color 0.3s ease, text-shadow 0.3s ease;
+   
+   }
+
+.navbar-collapse {
+   flex-grow: 0;  /* Prevent the collapse from affecting centering */
+   justify-content: center;
+}
+
+.navbar-nav {
+   display: flex;
+   gap: 0px;
+}
+.nav-item {
+   margin: 0 10px;
+}
+
+.nav-link:hover {
+   color: #4b6f4a;
+   text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.8);
+
 }
 
 .navbar .navbar-brand:hover {
@@ -60,8 +90,8 @@ h6 {
 
 @media (max-width: 768px) {
    .navbar {
-      padding: 10px;
       font-size: 0.9rem;
+      padding: 10px;
    }
 
    .navbar .navbar-brand {
@@ -72,7 +102,6 @@ h6 {
       margin: 0 5px;
    }
 }
-
 
 @media (max-width: 480px) {
    .navbar .navbar-brand {
@@ -86,13 +115,26 @@ h6 {
 
 /* Main Content Area */
 main {
-   flex-grow: 1;
+   flex: 1;
    background: var(--bg-shiny);
    box-shadow: inset 0 1px 3px rgba(255, 255, 255, 0.5), inset 0 -1px 5px rgba(0, 0, 0, 0.2);
    border-radius: 8px;
-   padding: 20px;
+   padding: 20px; 
    text-align: center;
-   overflow-y: auto;
+   flex-direction: column;
+   display: flex;
+}
+
+
+.container-fluid.main {
+   height: 100%;
+   
+   padding: 15px;
+} 
+
+.row {
+   margin: 0;
+   justify-content: center;
 }
 
 .blog-post-body {
@@ -110,19 +152,57 @@ main {
    margin: 20px;
 }
 
+
+/* cauldron container */
+.cauldron-wrapper {
+   width: 88%;
+   border-radius: 48%;
+   background: var(--bg-shiny);
+   display: flex; 
+   flex-direction: column;
+   padding: 20px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+   overflow-y: auto;
+   position: relative;
+   margin:  5px auto;
+   max-height: 82vh;
+   min-height: 82vh;
+   /*overflow-y: auto; */
+   /*overflow-x: hidden;*/
+   /*padding-right: 20px ; */
+   /*flex-grow: 1; */
+}
+
+
+
+.cauldron-wrapper::-webkit-scrollbar {
+   width: 8px;
+}
+.cauldron-wrapper::-webkit-scrollbar-track {
+   background: transparent;
+   margin-right: 20px;
+}
+
+.cauldron-wrapper::-webkit-scrollbar-thumb {
+   background: rgba(106, 142, 99, 0.5);
+   border-radius: 4px;
+}
+
+   
+
+
 /* Footer Styling */
 .footer {
+   position: sticky;
    background: transparent;
    color: var(--text-light);
    text-align: center;
-   padding: 10px;
+   padding: 5px ;
    font-size: 0.9rem;
    z-index: 10;
+   margin-top: 5px;
 }
 
-.footer i:hover {
-   color: #f4d03f;
-}
 
 @media (max-width: 768px) {
    .footer {
@@ -130,6 +210,9 @@ main {
       padding: 5px;
    }
 }
+
+
+
 
 @media (max-width: 480px) {
    .footer {
@@ -139,7 +222,7 @@ main {
 
 /* Buttons */
 button,
-.btn {
+.btn  {
    background: linear-gradient(135deg, #6a8e63, #4b6f4a);
    color: #ffffff;
    border: none;
@@ -178,6 +261,25 @@ button:disabled,
    box-shadow: none;
 }
 
+/* Pagination styling */
+.pagination .page-link {
+   color: #6a8e63;  /* Green text */
+   background: #ffffff;  /* White background */
+   border: none;
+}
+
+.pagination .page-link:hover {
+   color: #d9a441;  /* Gold text on hover */
+   background: #ffffff;  /* Keep white background */
+   border: none;
+}
+
+/* Remove the default blue focus outline */
+.pagination .page-link:focus {
+   box-shadow: none;
+   outline: none;
+}
+
 /* Cards */
 .card {
    background: linear-gradient(135deg, #ffffff, #f4f4f4);
@@ -187,6 +289,7 @@ button:disabled,
    color: #333333;
    width: 260px;
    margin: 5px auto;
+   margin-bottom: 20px;
    transition: 0.3s ease;
 }
 
@@ -252,4 +355,14 @@ button:disabled,
    background-color: #fff;
    border-radius: 12px;
    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card a,
+.card a:link,
+.card a:visited {
+   text-decoration: none;
+}
+
+.post-link {
+   text-decoration: none;
 }
